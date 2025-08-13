@@ -48,6 +48,8 @@
 
   <!-- jsvectormap -->
   <link rel="stylesheet" href="css/jsvectormap.min.css" />
+
+  @yield('custom-css')
 </head>
 <!--end::Head-->
 <!--begin::Body-->
@@ -740,7 +742,10 @@
       <div class="app-content">
         <!--begin::Container-->
         <div class="container-fluid">
-          <!--begin::Row-->
+
+          @yield('main-content')
+
+
           <div class="row">
             <!--begin::Col-->
             <div class="col-lg-3 col-6">
@@ -830,8 +835,7 @@
             </div>
             <!--end::Col-->
           </div>
-          <!--end::Row-->
-          <!--begin::Row-->
+
           <div class="row">
             <!-- Start col -->
             <div class="col-lg-7 connectedSortable">
@@ -1083,7 +1087,9 @@
             </div>
             <!-- /.Start col -->
           </div>
-          <!-- /.row (main row) -->
+
+
+
         </div>
         <!--end::Container-->
       </div>
@@ -1326,6 +1332,8 @@
     sparkline3.render();
   </script>
   <!--end::Script-->
+
+  @yield('custom-js')
 </body>
 <!--end::Body-->
 
